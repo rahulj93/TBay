@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
 	constructor(props) {
@@ -22,8 +23,18 @@ class SessionForm extends React.Component {
 	render () {
 		return (
 			<div className="login-form-container">
+				<span className="logo">
+					<img width="250" height="100" alt="tBay Logo" src='assets/logo3.png' />
+				</span>
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Create your Tbay account here 
+					{/* Create your Tbay account here  */}
+					<div className="formHeader"> 
+						{this.props.formType.toUpperCase()} here: 
+						<br/> 
+						<h5> {this.props.redirectMessage} {this.props.navLink} </h5>
+            &nbsp;
+					</div>
+					<br/>
 					<br/>
 					<div className="login-form">
 						<br />
@@ -35,6 +46,7 @@ class SessionForm extends React.Component {
 							/>
 						</label>
 						<br />
+						<br />
 						<label> Password:  
 							<input type="password"
 								value={this.state.password}
@@ -42,7 +54,9 @@ class SessionForm extends React.Component {
 								className="login-input"
 							/>
 						</label>
-						<button> Submit </button>
+						<br/> 
+						<br/> 
+						<button> {this.props.formType.toUpperCase()} </button>
 					</div>
 				</form>
 			</div>
