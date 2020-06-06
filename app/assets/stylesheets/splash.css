@@ -1,5 +1,46 @@
 .topnav {
-  position: absolute; 
+  /* position: absolute;  */
   background-color: lightblue;
   width: 100%;
+  display: flex; 
+  justify-content: space-between;
+
+  /* position: fixed; */
+}
+
+#gh-icon-cart {
+  height: 18px;
+  width: 23px;
+  
+}
+.logo {
+  /* width: "250";
+  height: "100"; */
+  padding-left: 0px;
+  align-self: left;
+}
+
+.searchbar {
+  padding-top: 50px;
+  padding-right: 250px;
+  text-align: left;
+}
+
+.myCarousel {
+  background-color: gray;
+  width: 100%;
+  display: block; 
+}
+
+.footer {
+  background-color: black;
+  width: 100%;
+  display: block; 
+  bottom: 0; 
+  /* position: fixed;  */
+}
+
+.toplinks {
+  display: flex;
+  justify-content: space-between;
 }
