@@ -139,16 +139,15 @@ button[disabled] {
   clear: both;
 
 }
-/* 
-footer
+
+/* footer
 {
     font-size:small;
     text-align:center;
-    /* height:50px; */
-    /* background-color:black; */
-    /* clear: both; */
- */
-/* } */
+    height:50px;
+    background-color:black;
+    clear: both;
+} */
 
 .sessionFormFooter  {
   margin-left: 500px;
