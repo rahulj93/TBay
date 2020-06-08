@@ -42,7 +42,7 @@ class Greeting extends React.Component {
           </span>
         </div>
 
-        <div className="myCarousel" data-ride="carousel"> 
+        {/* <div className="myCarousel" data-ride="carousel"> 
           <ol className="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -56,7 +56,7 @@ class Greeting extends React.Component {
               <img src="https://www.monsterinsights.com/wp-content/uploads/2019/11/breathtaking-online-shopping-statistics-you-never-knew-625x300.png" alt="Shopping" ></img>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className='footer'> hello </div>
 
