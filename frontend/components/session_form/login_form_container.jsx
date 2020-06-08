@@ -7,8 +7,9 @@ import SessionForm from './session_form';
 const mapStateToProps = ({ errors }) => ({
   // errors: errors.session, 
   formType: 'login', 
-  navLink: <Link to="/register">sign up instead</Link>,  
+  navLink: <Link to="/register">Create an account</Link>,  
   redirectMessage: 'Don\'t have an account? '
+  // redirectMessage: 'Sign in to tBay or '
 });
 
 const mapDispatchToProps = dispatch => ({

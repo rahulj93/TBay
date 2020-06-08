@@ -4,20 +4,31 @@ import { Link } from 'react-router-dom';
 class SessionForm extends React.Component {
 	constructor(props) {
 		super(props)
+		// this.state = {firstname: '', lastname: '', username: '', password: '', disabled:true, className= ''}
 		this.state = {firstname: '', lastname: '', username: '', password: '', disabled:true}
 		this.handleSubmit = this.handleSubmit.bind(this); 
 	}  
 
 	componentDidUpdate () {
 		Object.values(this.state).forEach (prop=>{
-			// if (prop === "" && this.state.disabled ) {
-			// 	this.setState({disabled: false})
-			// } 
+	// if (prop === "" && this.state.disabled ) {this.setState({disabled: false})} 
 			if (prop.length && this.state.disabled ) {
 				this.setState({disabled: false})
+				// this.setState({className: "enabled"})
 			} 
+			// else {
+			// 	this.setState({className: "disabled"})
+			// }
 		})
 	}
+
+	// componentWillUnmount () {
+	// 	Object.values(this.state).forEach(prop => {
+	// 		if (!prop.length && this.state.disabled) {
+	// 			this.setState({ disabled: true })
+	// 		}
+	// 	})
+	// }
 
 	update(field) {
 		return e => this.setState({
@@ -37,46 +48,50 @@ class SessionForm extends React.Component {
 	// 	}
 	// }
 
-
 	render () {
 		return (
 			<div className="login-form-container">
-				<span className="logo">
-					<Link to="/"> <img width="250" height="100" alt="tBay Logo" src='assets/logo3.png' /></Link>
-				</span>
-				<form onSubmit={this.handleSubmit} className="login-form-box">
-					{/* Create your Tbay account here  */}
+				<div className="header">
+					<span className="logo">
+						<Link to="/"> <img width="250" height="100" alt="tBay Logo" src='assets/logo3.png' /></Link>
+					</span>
 					<div className="formHeader"> 
-						{this.props.formType.toUpperCase()} here: 
-						<br/> 
+						{/* {this.props.formType.toUpperCase()} here:  */}
+						{/* <br/>  */}
 						<h5> {this.props.redirectMessage} {this.props.navLink} </h5>
-            &nbsp;
 					</div>
-					<br/>
-					<br/>
+				</div>
+
+				<div className="sessionIntroMessage"> 
+					Hello
+					<div className='welcomeMessage'> {this.props.formType[0].toUpperCase() + this.props.formType.slice(1)} here: </div> 
+				</div>
+
+				<form onSubmit={this.handleSubmit} className="login-form-box">
 					<div className="login-form">
 						<br />
 						<div className="name-textbox">
-							<input type="text"
-								value={this.state.firstname}
-								onChange={this.update('firstname')}
-								className="login-input"
-								// placeholder="First name: "
-							/>
-							<label> First name: </label>
-            &nbsp;
-							<input type="text"
-								value={this.state.lastname}
-								onChange={this.update('lastname')}
-								className="login-input"
-								// placeholder='Last name:'
-							/>
-							<label className='lastname-label lastname'> Last name: </label>
+								<input type="text" 
+									required=" "
+									value={this.state.firstname}
+									onChange={this.update('firstname')}
+									className="login-input"
+									// placeholder="First name: "
+								/>
+								<label> First name: </label>
+							&nbsp;
+								<input type="text"
+									required=" "
+									value={this.state.lastname}
+									onChange={this.update('lastname')}
+									className="login-input"
+								/>
+								<label className='lastname-label lastname'> Last name: </label>
 						</div>
 						<br/>
-
 						<div className="textbox">
 								<input type="text"
+									required=" "
 									value={this.state.username}
 									onChange={this.update('username')}
 									className="login-input"
@@ -86,17 +101,22 @@ class SessionForm extends React.Component {
 						<br />
 						<div className="textbox">
 								<input type="password"
+									required=" "
 									value={this.state.password}
 									onChange={this.update('password')}
 									className="login-input"
 									/>
 								<label> Password: </label> 
 						</div>
-						<br/> 
-						<br/> 
 						<button disabled={this.state.disabled}> {this.props.formType.toUpperCase()} </button>
 					</div>
 				</form>
+
+				{/* <div className="clearer"></div> */}
+				{/* <div style="clear: both"></div> */}
+				<div className="sessionFormFooter"> 
+					hello 
+				</div>
 			</div>
 		);
 	}
