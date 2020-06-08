@@ -1,17 +1,98 @@
-.login-form {
-  background-color: tan;
-  align-items: center;
-  text-align: center;
-  float: left;
-  width: 50%;
-  height: 400px;
-  font-size: xx-large;
-  margin-left: 260px;
-}
-
 .formHeader {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
   font-style: normal;
+}
+
+.login-form {
+  /* background-color: tan; */
+  align-items: center;
+  text-align: center;
+  float: left;
+  /* width: 50%; */
+  height: 400px;
+  font-size: xx-large;
+  /* margin-left: 260px; */
+  /* display: block; */
+  /* margin-left: 360px;
+  margin-right: 360px; */
+  padding-left: 35%;
+  padding-right: 30%;
+}
+
+.name-textbox {
+  position: relative;
+}
+
+.name-textbox > input {
+  width: 46%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.name-textbox > label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.lastname-label.lastname {
+  left: 150px;
+}
+
+
+
+.textbox {
+  position: relative;
+}
+
+.textbox > input {
+  width: 97%; 
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.textbox > label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+label {
+  padding-left: 10px;
+  position: absolute;
+  line-height: 50px;
+  font-size: small;
+}
+
+/* input:focus + label {
+  position: absolute;
+  top: 0; 
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  transition: 0.2s;
+} */
+input:focus + label {
+  position: absolute;
+  top: -20px; 
+  /* bottom: 0; */
+  left: 0px;
+  /* width: 100%;  */
+  transition: 0.2s;
+}
+
+/* form input:valid {
+  background: white;
+} */
+
+.login-form > button {
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #3665f3;
+  border-color: #3665f3;
+  color: #fff;
 }
