@@ -38,15 +38,16 @@ class Greeting extends React.Component {
           <div className='searchbar'>
             {/* <input type="dropdown" placeholder="Shop by Category"/> */}
             <div className="dropdown"> 
-              <label for="dropdown-categories">Shop by Category: 
               <select className="dropdown-categories"> 
+                <option disabled selected>Shop by Category: </option>
                 <option> electronics </option>
                 <option> appliances </option>
               </select> 
-              </label>
             </div>
             {/* &nbsp; */}
             <div className="search">
+              {/* <i className="fa fa-search" aria-hidden="true"></i> */}
+              	
               <input type="text" placeholder="Search for anything"/>
               {/* <label for="dropdown-all">All Categories
               <select className="dropdown-all">
@@ -57,12 +58,13 @@ class Greeting extends React.Component {
               {/* <button>Search</button>             */}
             </div> 
             <div className="second-dropdown">
-              <label for="dropdown-all">All Categories
+              {/* <label htmlFor="dropdown-all">All Categories */}
               <select className="dropdown-all">
+                  <option disabled selected>All Categories</option>
                   <option> electronics </option>
                   <option> appliances </option>
                 </select>
-              </label>
+              {/* </label> */}
             </div>
               <button>Search</button>            
           </div>
