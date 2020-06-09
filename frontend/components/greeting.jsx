@@ -88,7 +88,11 @@ class Greeting extends React.Component {
           </div>
         </div> */}
 
-        <div className='footer'> hello </div>
+        <div className="mainContent"> 
+
+        </div>
+
+        <div className='homeFooter'> hello </div>
 
 
       </div>

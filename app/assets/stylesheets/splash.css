@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  /* position: relative; */
 }
 
 .topnav {
@@ -96,17 +97,24 @@
   margin-bottom: 20px;
 }
 
-.myCarousel {
+/* .myCarousel {
   background-color: gray;
   width: 100%;
   display: block; 
+} */
+
+.mainContent {
+  background-color: whitesmoke;
+  height: 650px;
 }
 
-.footer {
+.homeFooter {
   background-color: black;
   width: 100%;
-  display: block; 
+  display: flex; 
+  /* position: absolute; */
   bottom: 0; 
+  align-self: flex-end;
   /* position: fixed;  */
 }
 
