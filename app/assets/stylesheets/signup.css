@@ -1,29 +1,33 @@
 .login-form-container {
   width: 100vw;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 form {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
 }
 
 .header {
-  /* display: flex; */
+  display: flex;
+  margin-top: 0px;
+  margin-right: 70px;
   justify-content: space-between;
   font-size: 1rem;
   font-family: "Market Sans",Arial,sans-serif;
 }
+
 .formHeader {
-  text-align: center;
   /* font-size: 36px; */
   font-weight: 700;
-  /* font-style: normal; */
-  margin-bottom: 100px;
+  /* justify-content: flex-end; */
 }
 
 .sessionIntroMessage {
+  margin-top: 50px;
   font-size: 2.25rem;
   line-height: 46px;
   font-weight: 700;
@@ -36,26 +40,17 @@ form {
   font-family: "Market Sans",Arial,sans-serif;
 }
 
-/* form { */
-  /* display: inline-block; */
-  /* display: flex; */
-/* } */
-
 .login-form {
   /* background-color: tan; */
   /* align-items: center; */
   /* text-align: center; */
-  float: left;
+  /* float: left; */
   /* width: 50%; */
   height: 400px;
   font-size: xx-large;
-  /* margin-left: 260px; */
+  /* margin-left: 100px;
+  margin-right: 100px; */
   /* display: block; */
-  /* margin-left: 360px;
-  margin-right: 360px; */
-  padding-left: 35%;
-  padding-right: 30%;
-  /* width: 30%; */
   position: absolute;
 }
 
@@ -134,42 +129,34 @@ button[disabled] {
   opacity:.2;
 }
 
-.clearer {
-  clear: both;
-}
-
-/* footer
-{
-    font-size:small;
-    text-align:center;
-    height:50px;
-    background-color:black;
-    clear: both;
-} */
-
 .sessionFormFooter  {
-  margin-left: 450px;
+  /* margin-left: 450px; */
   font-size: xx-large;
-  padding-top: 500px;
+  padding-top: 750px;
   font-family: "Market Sans",Arial,sans-serif;
+  /* display: flex;
+  justify-content: flex-end;
+  align-items: baseline; */
 }
 
 .myLinks {
+  /* display: flex;
+  align-items: baseline; */
+  /* justify-content: flex-end; */
   background-color: tan;
   font-size: small;
+  margin-bottom: 10px;
 }
 
 .linkedIn-logo {
   height: 5%;
   width: 5%;
-  position: right;
-  /* padding-left: 85%; */
+  /* position: right; */
   padding-right: 0;
 }
 .gitHub-logo {
   height: 5%;
   width: 5%;
-  position: right;
-  /* padding-left: 80%; */
+  /* position: right; */
   padding-right: 0;
 }
