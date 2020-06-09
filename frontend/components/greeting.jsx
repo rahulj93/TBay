@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 class Greeting extends React.Component {
   render () {
     return (
-      <div>
+      <div className="homePage">
         <div className = 'toplinks'> 
           <span className='leftlinks'> 
             <Link to='/signin' >Sign in</Link>
@@ -35,11 +35,30 @@ class Greeting extends React.Component {
           </span>
           {/* <br/> */}
           {/* &nbsp; */}
-          <span className='searchbar'>
-            <button>Shop by Category</button>
-            <input type="text" placeholder="Search for anything"/>
-            <button>Search</button>
-          </span>
+          <div className='searchbar'>
+            {/* <input type="dropdown" placeholder="Shop by Category"/> */}
+            <div className="dropdown"> 
+              <label for="dropdown-categories">Shop by Category: 
+              <select className="dropdown-categories"> 
+                <option> electronics </option>
+                <option> appliances </option>
+              </select> 
+              </label>
+            </div>
+            {/* &nbsp; */}
+            <div className="search">
+              <input type="text" placeholder="Search for anything"/>
+              <button>Search</button>            
+            </div> 
+            <div className="second-dropdown">
+              <label for="dropdown-all">All Categories
+              <select className="dropdown-all">
+                  <option> electronics </option>
+                  <option> appliances </option>
+                </select>
+              </label>
+            </div>
+          </div>
         </div>
 
         {/* <div className="myCarousel" data-ride="carousel"> 

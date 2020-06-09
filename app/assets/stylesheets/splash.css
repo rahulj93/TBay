@@ -1,3 +1,10 @@
+.homePage {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 .topnav {
   /* position: absolute;  */
   background-color: lightblue;
@@ -21,9 +28,33 @@
 }
 
 .searchbar {
-  padding-top: 50px;
-  padding-right: 250px;
+  display: inline;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  align-items: stretch;
+  /* margin-bottom: 50px; */
+  /* padding-top: 50px; */
+  margin-right: 250px;
   text-align: left;
+  background-color: gray;
+}
+
+.search {
+  /* width: 75%; */
+  background-color: greenyellow;
+}
+
+.dropdown {
+  /* margin-top: 10px; */
+}
+
+.search > button {
+  background-color: #3665f3;
+  border-color: #3665f3;
+  color: #fff;
+  margin-top: 15px;
 }
 
 .myCarousel {
