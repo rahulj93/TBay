@@ -1,5 +1,7 @@
 .login-form-container {
   width: 100vw;
+  /* display: flex; */
+  justify-content: center;
 }
 
 form {
@@ -8,7 +10,7 @@ form {
 }
 
 .header {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   font-size: 1rem;
   font-family: "Market Sans",Arial,sans-serif;
@@ -34,10 +36,10 @@ form {
   font-family: "Market Sans",Arial,sans-serif;
 }
 
-form {
+/* form {
   display: inline-block;
   /* display: flex; */
-}
+} */
 
 .login-form {
   /* background-color: tan; */
@@ -58,6 +60,7 @@ form {
 }
 
 .name-textbox {
+  margin-top: 40px;
   position: relative;
 }
 
@@ -69,7 +72,7 @@ form {
 }
 .name-textbox > label {
   position: absolute;
-  top: 0px;
+  top: -15px;
   left: 0px;
 }
 
@@ -77,8 +80,8 @@ form {
   left: 150px;
 }
 
-
 .textbox {
+  margin-top: 50px;
   position: relative;
 }
 
@@ -91,7 +94,7 @@ form {
 
 .textbox > label {
   position: absolute;
-  top: 0px;
+  top: -15px;
   left: 0px;
 }
 
@@ -105,17 +108,16 @@ label {
 
 input:focus + label {
   position: absolute;
-  top: -20px; 
+  top: -40px; 
   left: 0px;
   transition: 0.2s;
 }
 
 form input:valid + label {
   position: absolute;
-  top: -20px; 
+  top: -40px; 
   left: 0px;
   transition: 0.2s;
-  /* background: white; */
 }
 
 .login-form > button {
@@ -130,23 +132,10 @@ form input:valid + label {
 
 button[disabled] {
   opacity:.2;
-  /* background-color:gray; */
 }
-
-/* input[type="text"][disabled] {
-   color: red;
-} */
-
-/* .sessionFormFooter {
-  border-top: 100px;
-  border-top: black;
-  background-color: cornflowerblue;
-  position: relative;
-} */
 
 .clearer {
   clear: both;
-
 }
 
 /* footer
