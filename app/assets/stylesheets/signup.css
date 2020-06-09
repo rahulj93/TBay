@@ -145,6 +145,8 @@ button[disabled] {
   /* justify-content: flex-end; */
   background-color: tan;
   font-size: small;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 10px;
 }
 
