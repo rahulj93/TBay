@@ -115,7 +115,21 @@ class SessionForm extends React.Component {
 				{/* <div className="clearer"></div> */}
 				{/* <div style="clear: both"></div> */}
 				<div className="sessionFormFooter"> 
-					hello 
+					<div className="myLinks">
+						Click the icon-buttons to: 
+						<br/>
+						&nbsp;
+						Connect with me on LinkedIn,  
+							&nbsp;
+						{/* <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png"/> href="https://www.linkedin.com/in/rahul-jain-ny"/> */}
+						{/* <a href="https://www.linkedin.com/in/rahul-jain-ny">  LinkedIn  </a> */}
+						{/* <a href="https://www.linkedin.com/in/rahul-jain-ny"> <img className="linkedIn-logo" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" /></a> */}
+						<a href="https://www.linkedin.com/in/rahul-jain-ny"><img className="linkedIn-logo" src="assets/social-linkedin-circle-512.webp" /></a>
+							&nbsp;
+						 or see my work on GitHub:
+							&nbsp;
+						<a href="https://github.com/rahulj93"><img className="gitHub-logo" src='assets/github-logo.svg'/></a>
+					</div>
 				</div>
 			</div>
 		);

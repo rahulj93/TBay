@@ -150,7 +150,28 @@ button[disabled] {
 } */
 
 .sessionFormFooter  {
-  margin-left: 500px;
+  margin-left: 450px;
   font-size: xx-large;
-  /* padding-top: 50000px; */
+  padding-top: 500px;
+  font-family: "Market Sans",Arial,sans-serif;
+}
+
+.myLinks {
+  background-color: tan;
+  font-size: small;
+}
+
+.linkedIn-logo {
+  height: 5%;
+  width: 5%;
+  position: right;
+  /* padding-left: 85%; */
+  padding-right: 0;
+}
+.gitHub-logo {
+  height: 5%;
+  width: 5%;
+  position: right;
+  /* padding-left: 80%; */
+  padding-right: 0;
 }
