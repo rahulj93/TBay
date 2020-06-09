@@ -31,7 +31,7 @@ class Greeting extends React.Component {
           {/* <img src={ require("assets/images/logo.jpg") } />  */}
           {/* <img src={ logo } />  */}
           <span className="logo"> 
-            <img width="250" height="100" alt="tBay Logo" src='assets/logo3.png' />            
+            <img width="250" height="100" alt="tBay Logo" src={window.logoPNGURL3} />            
           </span>
           {/* <br/> */}
           {/* &nbsp; */}
