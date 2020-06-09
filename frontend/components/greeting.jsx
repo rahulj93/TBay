@@ -48,7 +48,13 @@ class Greeting extends React.Component {
             {/* &nbsp; */}
             <div className="search">
               <input type="text" placeholder="Search for anything"/>
-              <button>Search</button>            
+              {/* <label for="dropdown-all">All Categories
+              <select className="dropdown-all">
+                  <option> electronics </option>
+                  <option> appliances </option>
+                </select>
+              </label> */}
+              {/* <button>Search</button>             */}
             </div> 
             <div className="second-dropdown">
               <label for="dropdown-all">All Categories
@@ -58,6 +64,7 @@ class Greeting extends React.Component {
                 </select>
               </label>
             </div>
+              <button>Search</button>            
           </div>
         </div>
 
