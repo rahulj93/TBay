@@ -121,12 +121,18 @@ class SessionForm extends React.Component {
 						{/* <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png"/> href="https://www.linkedin.com/in/rahul-jain-ny"/> */}
 						{/* <a href="https://www.linkedin.com/in/rahul-jain-ny"> <img className="linkedIn-logo" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" /></a> */}
 						{/* <a href="https://www.linkedin.com/in/rahul-jain-ny"><img className="linkedIn-logo" src="assets/social-linkedin-circle-512.webp" /></a> */}
-						<a href="https://www.linkedin.com/in/rahul-jain-ny"><img className="linkedIn-logo" src={window.linkedInURL} /></a>
+						<a href="https://www.linkedin.com/in/rahul-jain-ny">
+							{/* <i className="fab fa-linkedin"></i> */}
+							<img className="linkedIn-logo" src={window.linkedInURL} />
+							</a>
 							&nbsp;
 						 or see my work on GitHub:
 							&nbsp;
 						{/* <a href="https://github.com/rahulj93"><img className="gitHub-logo" src='assets/github-logo.svg'/></a> */}
-						<a href="https://github.com/rahulj93"><img className="gitHub-logo" src={window.gitHubURL}/></a>
+						<a href="https://github.com/rahulj93">
+							{/* <i className="fab fa-github"></i> */}
+							<img className="gitHub-logo" src={window.gitHubURL}/>
+						</a>
 					</div>
 				</div>
 			</div>

@@ -39,16 +39,17 @@ class Greeting extends React.Component {
             {/* <input type="dropdown" placeholder="Shop by Category"/> */}
             <div className="dropdown"> 
               <select className="dropdown-categories"> 
-                <option disabled selected>Shop by Category: </option>
-                <option> electronics </option>
+                <option value="" disabled selected>Shop by Category: </option>
+                <option value=""> electronics </option>
                 <option> appliances </option>
               </select> 
             </div>
             {/* &nbsp; */}
             <div className="search">
-              {/* <i className="fa fa-search" aria-hidden="true"></i> */}
+              <i className="fa fa-search" aria-hidden="true"></i>
               	
               <input type="text" placeholder="Search for anything"/>
+              {/* <svg aria-hidden="true" class="icon icon--search gh-search__icon" focusable="false" height="14" width="14"><use xlink:href="#icon-search"></use></svg> */}
               {/* <label for="dropdown-all">All Categories
               <select className="dropdown-all">
                   <option> electronics </option>
@@ -60,8 +61,9 @@ class Greeting extends React.Component {
             <div className="second-dropdown">
               {/* <label htmlFor="dropdown-all">All Categories */}
               <select className="dropdown-all">
-                  <option disabled selected>All Categories</option>
-                  <option> electronics </option>
+                  <option value="" disabled selected>All Categories</option>
+                  <option value=""> electronics </option>
+                  {/* <option> electronics </option> */}
                   <option> appliances </option>
                 </select>
               {/* </label> */}
