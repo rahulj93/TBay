@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
 
 	private 
 
-	def user_params
+	def product_params
 		params.require(:product).permit(:description, :price, :seller_id, :customer_id)
 	end 
 
