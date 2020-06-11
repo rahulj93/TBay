@@ -88,6 +88,9 @@ class Greeting extends React.Component {
           </div>
         </div> */}
 
+        <div className="sideNav"> 
+
+        </div>
         <div className="mainContent"> 
 
         </div>

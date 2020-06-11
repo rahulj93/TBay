@@ -103,7 +103,15 @@
   display: block; 
 } */
 
+.sideNav {
+  width: 75%;
+  float: left;
+  background-color: green;
+}
+
 .mainContent {
+  width: 25%;
+  float: right;
   background-color: whitesmoke;
   height: 650px;
 }
