@@ -36,6 +36,10 @@ class SessionForm extends React.Component {
 		}); 
 	}
 
+	demoSubmit() {
+		this.setState({ username: "masterUser", password: "masterUser" })
+	}
+
 	handleSubmit(e) {
 		e.preventDefault();
 		const user = Object.assign({}, this.state); 
@@ -108,6 +112,11 @@ class SessionForm extends React.Component {
 								<label> Password: </label> 
 						</div>
 						<button disabled={this.state.disabled}> {this.props.formType.toUpperCase()} </button>
+						<Link to="/"> <button 
+						className="demoButton"
+						type="submit"
+							onClick={() => this.demoSubmit()}>Demo User</button> 
+						</Link>			
 					</div>
 				</form>
 
@@ -122,16 +131,16 @@ class SessionForm extends React.Component {
 						{/* <a href="https://www.linkedin.com/in/rahul-jain-ny"> <img className="linkedIn-logo" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" /></a> */}
 						{/* <a href="https://www.linkedin.com/in/rahul-jain-ny"><img className="linkedIn-logo" src="assets/social-linkedin-circle-512.webp" /></a> */}
 						<a href="https://www.linkedin.com/in/rahul-jain-ny">
-							{/* <i className="fab fa-linkedin"></i> */}
-							<img className="linkedIn-logo" src={window.linkedInURL} />
+							<i className="fab fa-linkedin"></i>
+							{/* <img className="linkedIn-logo" src={window.linkedInURL} /> */}
 							</a>
 							&nbsp;
 						 or see my work on GitHub:
 							&nbsp;
 						{/* <a href="https://github.com/rahulj93"><img className="gitHub-logo" src='assets/github-logo.svg'/></a> */}
 						<a href="https://github.com/rahulj93">
-							{/* <i className="fab fa-github"></i> */}
-							<img className="gitHub-logo" src={window.gitHubURL}/>
+							<i className="fab fa-github"></i>
+							{/* <img className="gitHub-logo" src={window.gitHubURL}/> */}
 						</a>
 					</div>
 				</div>
