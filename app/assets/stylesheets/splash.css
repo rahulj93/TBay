@@ -12,6 +12,8 @@
   width: 100%;
   display: flex; 
   justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
 
   /* position: fixed; */
 }
@@ -97,24 +99,76 @@
   margin-bottom: 20px;
 }
 
-/* .myCarousel {
-  background-color: gray;
+.myCarousel {
+  background-color: lightgray;
   width: 100%;
-  display: block; 
-} */
-
-.sideNav {
-  width: 75%;
-  float: left;
-  background-color: green;
+  display: flex;
+  justify-content: center; 
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
+/* .sideNav {
+  width: 75%;
+  position: absolute;
+  float: left;
+  background-color: green;
+} */
+
 .mainContent {
-  width: 25%;
-  float: right;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* position: relative; */
+  /* width: 25%; */
+  /* float: right; */
   background-color: whitesmoke;
   height: 650px;
 }
+
+.rowbox {
+  margin-top: 5px;
+  border: thin solid black;
+  height: 20%;
+  width: 20%;
+  /* border-right: black 1px; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* flex-direction: row; */
+}
+
+.rowbox > button {
+  /* justify-self: center; */
+  /* align-self: baseline; */
+}
+
+/* .row1box2 {
+  margin-top: 5px;
+  border: thin solid black;
+  height: 25%;
+  width: 25%;
+} */
+
+/* .row1box3 {
+  margin-top: 5px;
+  border: thin solid black;
+  height: 25%;
+  width: 25%;
+}
+
+.row1box4 {
+  margin-top: 5px;
+  border: thin solid black;
+  height: 25%;
+  width: 25%;
+} */
+
+
+
+
 
 .homeFooter {
   background-color: black;
@@ -129,4 +183,53 @@
 .toplinks {
   display: flex;
   justify-content: space-between;
+  font-family: "Market Sans",Arial,sans-serif;
+  font-size: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
+  vertical-align: middle;  
+  
+  /* text-decoration: none; */
+}
+
+.leftlinks {
+  text-decoration: none !important;
+}
+
+.fa.fa-shopping-cart {
+  font-size: 14px ;
+}
+
+/* #gh-Alerts-i {
+
+  --color-background-default: #fff;
+  --color-text-default: #111820;
+  white-space: nowrap;
+  list-style: none;
+  font: inherit;
+  color: #333 !important;
+  cursor: pointer;
+  background-image: url(https://ir.ebaystatic.com/rs/v/fxxj3ttftm5ltcqnto1o4baovyl.png);
+  background-repeat: no-repeat;
+  background-size: 250px 200px;
+  background-position: -37px -101px !important;
+  width: 16px;
+  height: 18px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  font-size: 0;
+} */
+
+.navBar {
+  /* justify-content: stretch; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  /* align-content: space-between; */
+  font-family: "Market Sans",Arial,sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 12px;
+  /* align-items: stretch; */
 }

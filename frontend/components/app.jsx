@@ -19,8 +19,13 @@ const App = () => (
     {/* <h1> TBAY </h1> */}
     <Route exact path="/" component= {Greeting} /> 
     <Switch> 
-      <Route exact path="/signin" component={LogInFormContainer} />
-      <Route exact path="/register" component={SignUpFormContainer} />
+      <AuthRoute exact path="/signin" component={LogInFormContainer} />
+      <AuthRoute exact path="/register" component={SignUpFormContainer} />
+      {/* <ProtectedRoute exact path="/demoUser" component={DemoUserContainer} /> */}
+      {/* <ProtectedRoute exact path="/benches/new" component={BenchFormContainer} /> */}
+
+      {/* <AuthRoute exact path="/" component= {Greeting}/>  */}
+      {/* <ProtectedRoute exact path="/" component= {Greeting}/>  */}
     </Switch> 
   </div> 
 );
