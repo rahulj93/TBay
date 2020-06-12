@@ -32,8 +32,10 @@ Check out the live Site hosted on Heroku (link below):
 * https://tbay.herokuapp.com/#/    
 
 
+Development Languages: 
+
 * Ruby Version 2.5.1
-* Node Version 10.13.0
+* Node JavaScript Version 10.13.0
 
 Database creation: 
 
