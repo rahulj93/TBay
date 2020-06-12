@@ -128,6 +128,7 @@ class Greeting extends React.Component {
             description:
             <br />
             price: 
+            <button>Add to Cart</button>
           </div>
           <div className="rowbox">
             row 1: box 2
