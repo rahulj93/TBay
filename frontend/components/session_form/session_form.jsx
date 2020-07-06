@@ -1,12 +1,23 @@
 import React from 'react'; 
 import { Link } from 'react-router-dom';
+// import Greeting from '../greeting';
+// import {Route} from 'react-router-dom'; 
+// import Greeting from '../greeting';
 
 class SessionForm extends React.Component {
 	constructor(props) {
 		super(props)
 		// this.state = {firstname: '', lastname: '', username: '', password: '', disabled:true, className= ''}
-		this.state = {firstname: '', lastname: '', username: '', password: '', disabled:true}
+		this.state = {
+			firstname: '', 
+			lastname: '', 
+			username: '', 
+			password: '', 
+			disabled:true
+		}
+
 		this.handleSubmit = this.handleSubmit.bind(this); 
+		this.demoSubmit = this.demoSubmit.bind(this); 
 	}  
 
 	componentDidUpdate () {
@@ -37,13 +48,27 @@ class SessionForm extends React.Component {
 	}
 
 	demoSubmit() {
-		this.setState({ username: "masterUser", password: "masterUser" })
+		this.setState({ 
+			firstname: 'admin',
+			lastname: 'account', 
+			username: "admin@tbay.com", 
+			password: "administrator" 
+		})
 	}
 
 	handleSubmit(e) {
 		e.preventDefault();
+		const {history} = this.props; 
+
 		const user = Object.assign({}, this.state); 
-		this.props.processForm(user); 
+		this.props.processForm(user)
+		// .then(()=>console.log("logged in!"));
+		.then(() => {
+			console.log(`${this.state.username} has successfully logged in!`);
+			history.push('/')
+		}); 
+		// .then(() => return <Route component={Greeting}/>)
+		// <Route component={Greeting} />
 	}
 
 	// info() {
@@ -111,12 +136,16 @@ class SessionForm extends React.Component {
 									/>
 								<label> Password: </label> 
 						</div>
-						<button disabled={this.state.disabled}> {this.props.formType.toUpperCase()} </button>
-						<Link to="/"> <button 
-						className="demoButton"
-						type="submit"
-							onClick={() => this.demoSubmit()}>Demo User</button> 
-						</Link>			
+						{/* <div className="buttons">  */}
+							<button disabled={this.state.disabled}> {this.props.formType.toUpperCase()} </button>
+							{/* <Link to="/">  */}
+							<button 
+							className="demoButton"
+							type="submit"
+							onClick={() => this.demoSubmit()}>Demo User
+								</button> 
+							{/* </Link>			 */}
+						{/* </div> */}
 					</div>
 				</form>
 
