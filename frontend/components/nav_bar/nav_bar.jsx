@@ -47,7 +47,7 @@ class NavBar extends React.Component {
     } else {
       console.log('no current user ');
       display = visitor;
-      display = member;
+      // display = member;
     };
 
     return (
