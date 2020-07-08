@@ -124,18 +124,18 @@ class Greeting extends React.Component {
           {/* <div className="sideNav"> 
             This is the sideNav
           </div> */}
-          <div className="rowbox">
-            <ul>
-              <li>{Math.ceil(Math.random()*90)}</li>
-              <li>2</li>
-              <li>3</li>
-              {[1, 2, 3].forEach(el => {
-                // console.log('el: ', el);
-                return <li>{`${el}`}</li>
-              }
-              )}
-            </ul>
-          </div>
+              {/* <div className="rowbox">
+                <ul>
+                  <li>{Math.ceil(Math.random()*90)}</li>
+                  <li>2</li>
+                  <li>3</li>
+                  {[1, 2, 3].forEach(el => {
+                    // console.log('el: ', el);
+                    return <li>{`${el}`}</li>
+                  }
+                  )}
+                </ul>
+              </div> */}
           <div className="rowbox">
             row 1: box 1
             <br />
