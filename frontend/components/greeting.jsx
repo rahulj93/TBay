@@ -10,7 +10,8 @@ class Greeting extends React.Component {
   render () {
     return (
       <div className="homePage">
-        <Nav_bar/>
+        {/* <Nav_bar currentUser={this.state.username} logout={this.props.logout}/> */}
+        <Nav_bar />
         {/* <div className = 'toplinks'> 
           <span className='leftlinks'> 
             <Link to='/signin' >Sign in</Link>
@@ -102,26 +103,39 @@ class Greeting extends React.Component {
             <Link to='/signin' >More</Link>
         </div>
 
-        <div className="myCarousel" data-ride="carousel"> 
+        <div className="myCarousel" data-ride="carousel">   
+          
           {/* <ol className="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
           </ol> */}
 
-          <div className="carousel-inner">
-            <div className="item active">
+          {/* <div className="carousel-inner"> */}
+            {/* <div className="item active"> */}
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqQTo7tbLTmbzdlrih0G2P2XozDtsP6uxfslJim0LLN4OV7a9q&usqp=CAU" alt="minions" ></img>
-            </div>
-            {/* <div className="item">
+            {/* </div> */}
+            {/* <div className="item"> */}
               <img src="https://www.monsterinsights.com/wp-content/uploads/2019/11/breathtaking-online-shopping-statistics-you-never-knew-625x300.png" alt="Shopping" ></img>
-            </div> */}
-          </div>
+            {/* </div> */}
+          {/* </div> */}
         </div>
 
         <div className="mainContent"> 
           {/* <div className="sideNav"> 
             This is the sideNav
           </div> */}
+          <div className="rowbox">
+            <ul>
+              <li>{Math.ceil(Math.random()*90)}</li>
+              <li>2</li>
+              <li>3</li>
+              {[1, 2, 3].forEach(el => {
+                // console.log('el: ', el);
+                return <li>{`${el}`}</li>
+              }
+              )}
+            </ul>
+          </div>
           <div className="rowbox">
             row 1: box 1
             <br />

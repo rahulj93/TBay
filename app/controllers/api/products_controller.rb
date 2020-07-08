@@ -6,7 +6,12 @@ class Api::ProductsController < ApplicationController
 		else
 			render json: @product.errors.full_messages, status: 422
 		end 
-	end 
+  end 
+  
+  def index
+    @products = Product.all 
+    render :index
+  end 
 
   def show
     @product = Product.find(params[:id])
@@ -15,7 +20,7 @@ class Api::ProductsController < ApplicationController
 	private 
 
 	def product_params
-		params.require(:product).permit(:description, :price, :seller_id, :customer_id)
+		params.require(:product).permit(:title, :description, :price, :seller_id, :customer_id)
 	end 
 
 end 

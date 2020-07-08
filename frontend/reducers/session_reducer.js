@@ -3,19 +3,44 @@ import {
 	LOGOUT_CURRENT_USER
 } from '../actions/session_actions'; 
 
-const _nullSession = {
-	currentUser: null 
+const _visitorSession = {
+	id: null 
 };
 
-export default (state = _nullSession, action) =>  {
+// export default (state = _visitorSession, action) =>  {
+const sessionReducer = (state = _visitorSession, action) =>  {
 	Object.freeze(state); 
 
 	switch (action.type) {
+		// case RECEIVE_CURRENT_USER:
+		// 	return { id: action.currentUser.id };
 		case RECEIVE_CURRENT_USER: 
-			return Object.assign({}, { currentUser: action.user }); 
+			return Object.assign({}, { id: action.currentUser.id }); 
 		case LOGOUT_CURRENT_USER:
-			return _nullSession; 
+			return _visitorSession; 
 		default:
 			return state; 
 	}
 }; 
+
+export default sessionReducer; 
+
+
+
+// const _nullUser = Object.freeze({
+// 	id: null
+// });
+
+// const sessionReducer = (state = _nullUser, action) => {
+// 	Object.freeze(state);
+// 	switch (action.type) {
+// 		case RECEIVE_CURRENT_USER:
+// 			return { id: action.currentUser.id };
+// 		case LOGOUT_CURRENT_USER:
+// 			return _nullUser;
+// 		default:
+// 			return state;
+// 	}
+// };
+
+// export default sessionReducer;
