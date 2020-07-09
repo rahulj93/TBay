@@ -8,9 +8,13 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props); 
 
-    this.state = this.props.currentUser;
+    // this.state = this.props.currentUser;
 
     this.handleLogout = this.handleLogout.bind(this); 
+  }
+
+  componentWillReceiveProps(newState) {
+    this.setState({currentUser: newState.currentUser});
   }
 
   handleLogout(e) {
@@ -41,6 +45,7 @@ class NavBar extends React.Component {
     )
 
     let display;
+    console.log(this.props.currentUser); 
 
     if (this.props.currentUser) {
       display = member;

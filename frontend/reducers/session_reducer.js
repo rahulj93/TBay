@@ -8,39 +8,39 @@ const _visitorSession = {
 };
 
 // export default (state = _visitorSession, action) =>  {
-const sessionReducer = (state = _visitorSession, action) =>  {
-	Object.freeze(state); 
+// const sessionReducer = (state = _visitorSession, action) =>  {
+// 	Object.freeze(state); 
 
-	switch (action.type) {
-		// case RECEIVE_CURRENT_USER:
-		// 	return { id: action.currentUser.id };
-		case RECEIVE_CURRENT_USER: 
-			return Object.assign({}, { id: action.currentUser.id }); 
-		case LOGOUT_CURRENT_USER:
-			return _visitorSession; 
-		default:
-			return state; 
-	}
-}; 
-
-export default sessionReducer; 
-
-
-
-// const _nullUser = Object.freeze({
-// 	id: null
-// });
-
-// const sessionReducer = (state = _nullUser, action) => {
-// 	Object.freeze(state);
 // 	switch (action.type) {
-// 		case RECEIVE_CURRENT_USER:
-// 			return { id: action.currentUser.id };
+// 		// case RECEIVE_CURRENT_USER:
+// 		// 	return { id: action.currentUser.id };
+// 		case RECEIVE_CURRENT_USER: 
+// 			return Object.assign({}, { id: action.currentUser.id }); 
 // 		case LOGOUT_CURRENT_USER:
-// 			return _nullUser;
+// 			return _visitorSession; 
 // 		default:
-// 			return state;
+// 			return state; 
 // 	}
-// };
+// }; 
 
-// export default sessionReducer;
+// export default sessionReducer; 
+
+
+
+const _nullUser = Object.freeze({
+	id: null
+});
+
+const sessionReducer = (state = _nullUser, action) => {
+	Object.freeze(state);
+	switch (action.type) {
+		case RECEIVE_CURRENT_USER:
+			return { id: action.currentUser.id };
+		case LOGOUT_CURRENT_USER:
+			return _nullUser;
+		default:
+			return state;
+	}
+};
+
+export default sessionReducer;

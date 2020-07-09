@@ -13,9 +13,16 @@ export const logoutCurrentUser = () => ({
 	type: LOGOUT_CURRENT_USER, 
 }); 
 
+// export const signup = user => dispatch => (
+// 	APIUtil.signup(user)
+// 		.then(user=> dispatch({type: RECEIVE_CURRENT_USER, user: user}) ) 
+// );
+
 export const signup = user => dispatch => (
 	APIUtil.signup(user)
-		.then(user=> dispatch({type: RECEIVE_CURRENT_USER, user: user}) ) 
+	.then(user => dispatch(receiveCurrentUser(user)
+	)
+	)
 );
 
 // export const login = user => dispatch => (
