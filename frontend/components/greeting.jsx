@@ -13,11 +13,16 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props); 
     this.state = this.props.currentUser; 
-
     // this.state = {
     //   listings = [] 
     // }
   }
+
+  componentDidMount() {
+    localStorage.setItem('greeting', JSON.stringify(this.state)); 
+  }
+
+  
   render () {
 
     // const listings = [1,2,3,4].map(count => {
@@ -31,7 +36,7 @@ class Greeting extends React.Component {
 
     return (
       <div className="homePage">
-        {console.log(this.props.currentUser)} 
+        {/* {console.log(this.props.currentUser)}  */}
         {/* <Nav_bar currentUser={this.state.username} logout={this.props.logout}/> */}
         <Nav_bar
           currentUser={this.props.currentUser} 
@@ -129,48 +134,32 @@ class Greeting extends React.Component {
 
           {[1,2,3,4].forEach(count => {
             // console.log(`count: ${count}`);
-            return (
               // <li>{`${count}`}</li>
-              <ProductBox />
-            ) 
+              return <ProductBox />
           })}
 
-          {/* <div className="rowbox">
-            <ul>
-              <li>{Math.ceil(Math.random()*90)}</li>
-              <li>2</li>
-              <li>3</li>
-              )}
-            </ul>
-          </div> */}
-
           <div className="rowbox">
-            row 1: box 1
-            <br />
-            description:
-            <br />
-            price: 
-            <br/>
+            row 1 <br/>
+            description: <br />
+            price: <br />
             <button>Add to Cart</button>
+            <ol>
+              <li>{Math.random()*99}</li>
+              <li>{"hello" + " hello"}</li>
+            </ol>
           </div>
 
           <ProductBox />
           <ProductBox /> 
           <ProductBox /> 
 
-
-          <div className="rowbox">
-            row 2
-            <br />
-            description:
-            <br />
-            price:
-            <br />
-            <button>Add to Cart</button>
-          </div>
+          {/* Row 2 */}
+          <ProductBox /> 
           <ProductBox />
           <ProductBox />
           <ProductBox /> 
+
+          {/* Row 3 */}
 
           <div className="rowbox">
             row 3
@@ -184,15 +173,9 @@ class Greeting extends React.Component {
           <ProductBox />
           <ProductBox />
           <ProductBox /> 
-          <div className="rowbox">
-            row 4
-            <br />
-            description:
-            <br />
-            price:
-            <br />
-            <button>Add to Cart</button>
-          </div>
+
+          {/* Row 4 */}
+          <ProductBox />
           <ProductBox />
           <ProductBox />
           <ProductBox /> 
