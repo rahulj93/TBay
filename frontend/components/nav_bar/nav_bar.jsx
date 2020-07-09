@@ -38,7 +38,8 @@ class NavBar extends React.Component {
     const member = (
       <header>
         {/* Hello, {this.state.username} */}
-        <button onClick={this.handleLogout}>Log Out</button>
+        {/* <button onClick={this.handleLogout}>Log Out</button> */}
+        <button onClick={this.props.logout}>Log Out</button>
         <Link to='/signin' > | Daily Deals | </Link>
         <Link to='/signin' > Help & Contact | </Link>
       </header>

@@ -35,6 +35,7 @@ class Greeting extends React.Component {
         {/* <Nav_bar currentUser={this.state.username} logout={this.props.logout}/> */}
         <Nav_bar
           currentUser={this.props.currentUser} 
+          logout={this.props.logout}
         />
         {/* <div className = 'toplinks'> 
             <Link to='/signin' >  */}
