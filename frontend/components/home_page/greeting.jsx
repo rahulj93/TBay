@@ -11,7 +11,6 @@ import {Carousel} from '../carousel/carousel';
 import ProductBox from '../product_listing_form/productBox';
 
 {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link> */}
-
 {/* <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"></link> */}
 
 class Greeting extends React.Component {
@@ -27,7 +26,6 @@ class Greeting extends React.Component {
   componentDidMount() {
     localStorage.setItem('greeting', JSON.stringify(this.state)); 
   }
-
   
   render () {
 
@@ -38,7 +36,6 @@ class Greeting extends React.Component {
     // })
 
     // console.log(listings);
-
 
     return (
       <div className="homePage">
