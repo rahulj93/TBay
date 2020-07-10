@@ -57,6 +57,9 @@
 .search {
   /* background-color: greenyellow; */
   width: 100%;
+  margin-left: 20px;
+  /* height: 42px;
+  font-size: 16px; */
 }
 
 .search > input {

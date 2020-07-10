@@ -4,6 +4,13 @@ import store from 'store';
 import { logout } from '../../util/session_api_util';
 
 export const NavBar = ({currentUser, logout}) => {
+
+  // const handleLogout = history => () => {
+  //   store.remove('loggedIn');
+  //   // history.push('/signin'); 
+  //   // this.props.history.push('/signin'); 
+  // }
+
   const visitor = () => (
     <header>
       <Link to='/signin' >Sign in</Link>
@@ -18,6 +25,7 @@ export const NavBar = ({currentUser, logout}) => {
   const member = () => (
     <header>
       <button onClick={logout}>Log Out</button>
+      {/* <button onClick={handleLogout(history)}>Log Out</button> */}
       <Link to='/signin' > | Daily Deals | </Link>
       <Link to='/signin' > Help & Contact | </Link>
     </header>
@@ -32,6 +40,7 @@ export const NavBar = ({currentUser, logout}) => {
     console.log('no current user ');
     display = visitor();
   };
+
 
   return (
     <div className="toplinks">
@@ -79,23 +88,16 @@ export const MiddleBar = () => {
 //     this.handleLogout = this.handleLogout.bind(this); 
 //     // this.username = this.props.currentUser.username || "visitor"; 
 //   }
-  
-//   // const handleLogout = history => () => {
-//   //   store.remove('loggedIn');
-//   //   // history.push('/signin'); 
-//   //   // this.props.history.push('/signin'); 
-//   // }
-  
 
 //   componentWillReceiveProps(newState) {
 //     this.setState({currentUser: newState.currentUser});
 //   }
 
-//   handleLogout(e) {
-//     e.preventDefault(); 
-//     this.props.logout()
-//     .then(()=>console.log('Successfully logged out!'));
-//   }
+//   // handleLogout(e) {
+//   //   e.preventDefault(); 
+//   //   this.props.logout()
+//   //   .then(()=>console.log('Successfully logged out!'));
+//   // }
 
 //   render () {
 //     const visitor = (
@@ -115,7 +117,8 @@ export const MiddleBar = () => {
 //       <header>
 //         {/* Hello, {this.state.username} */}
 //         {/* Hello, {this.props.username} */}
-//         <button onClick={this.handleLogout}>Log Out</button>
+//         {/* <button onClick={this.handleLogout}>Log Out</button> */}
+//         <button onClick={handleLogout(history)}>Log Out</button>
 //         {/* <button onClick={this.props.logout}>Log Out</button> */}
 //         <Link to='/signin' > | Daily Deals | </Link>
 //         <Link to='/signin' > Help & Contact | </Link>
