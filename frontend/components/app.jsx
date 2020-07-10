@@ -7,8 +7,8 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
-import Greeting from './greeting';
-import GreetingContainer from './greeting_container'; 
+import Greeting from './home_page/greeting'; 
+import GreetingContainer from './home_page/greeting_container'; 
 
 import SignUpFormContainer from './session_form/signupForm_container';
 import LogInFormContainer from './session_form/login_form_container';

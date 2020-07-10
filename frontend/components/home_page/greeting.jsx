@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 // import logo from 'assets/images/logo.png'; 
 // const logo = require('../app/assets/images/logo.png');
-import Nav_bar from './nav_bar/nav_bar';
+// import Nav_bar from '../nav_bar/nav_bar';
+import {NavBar, MiddleBar} from '../nav_bar/nav_bar';
 
-import ProductBox from './product_listing_form/productBox';
+import ProductBox from '../product_listing_form/productBox';
 
 {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link> */}
 
@@ -37,8 +38,11 @@ class Greeting extends React.Component {
     return (
       <div className="homePage">
         {/* {console.log(this.props.currentUser)}  */}
-        {/* <Nav_bar currentUser={this.state.username} logout={this.props.logout}/> */}
-        <Nav_bar
+        {/* <Nav_bar
+          currentUser={this.props.currentUser} 
+          logout={this.props.logout}
+        /> */}
+        <NavBar
           currentUser={this.props.currentUser} 
           logout={this.props.logout}
         />
@@ -98,7 +102,9 @@ class Greeting extends React.Component {
           </div>
         </div>
 
-        <div className = "navBar">
+        <MiddleBar /> 
+
+        {/* <div className = "navBar">
             <Link to='/signin' >Home</Link>
             <Link to='/register' >Saved</Link>
             <Link to='/signin' >Motors</Link>
@@ -109,7 +115,7 @@ class Greeting extends React.Component {
             <Link to='/signin' >Sporting Goods</Link>
             <Link to='/signin' >Toys</Link>
             <Link to='/signin' >More</Link>
-        </div>
+        </div> */}
 
         <div className="myCarousel" data-ride="carousel">   
           
