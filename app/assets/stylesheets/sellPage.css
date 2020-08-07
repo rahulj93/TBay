@@ -1,0 +1,77 @@
+.sellPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  align-content: space-between;
+  /* background-color: cadetblue; */
+}
+
+.bigAdBox { 
+  flex-wrap: wrap;
+  width: 100%;
+  display:flex; 
+  justify-content: space-between;
+  /* flex-direction: column; */
+  /* height: 20%; */
+  /* width:20%;  */
+  /* background-color: blueviolet; */
+  /* font: 50px "Helvetica Neue"; */
+  font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
+  /* font-size: 3.125rem;  */
+}
+
+/* .adBox {
+  background-color: cornflowerblue;
+  margin-top: 5px;
+  border: thin solid black;
+  height: 20%;
+  width: 20%;
+} */
+
+.bigAdBox > div {
+  background-color: white;
+  width: 30%;
+  height: 450px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* line-height: 0em; */
+}
+
+.sellSearch { 
+  background-image: url("hero_7plus_new@2x.jpg"); 
+  /* background-image: url(https://ir.ebaystatic.com/pictures/aw/sell/lnd/hero_7plus_new@2x.jpg)" */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.25;
+  /* font-size: 3rem; */
+}
+
+.sellSearch > input {
+  height: 200px;
+}
+
+
+.largerAdBox {
+  width: 60%;
+}
+
+
+.bigAdBox > section {
+  margin-top: 190px;
+  width: 65%; 
+}

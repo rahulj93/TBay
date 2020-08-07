@@ -10,6 +10,9 @@ import {
 import Greeting from './home_page/greeting'; 
 import GreetingContainer from './home_page/greeting_container'; 
 
+import CustomerService from './help&contact/customer_service'; 
+import SellPage from './sell_page/sell_page'; 
+
 import SignUpFormContainer from './session_form/signupForm_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -23,6 +26,8 @@ const App = () => (
     <Switch> 
       <AuthRoute exact path="/signin" component={LogInFormContainer} />
       <AuthRoute exact path="/register" component={SignUpFormContainer} />
+      <Route exact path="/help" component={CustomerService} /> 
+      <Route exact path='/sell' component={SellPage} /> 
       {/* <ProtectedRoute exact path="/" component= {GreetingContainer} />  */}
       {/* <ProtectedRoute */}
       {/* <ProtectedRoute exact path="/demoUser" component={DemoUserContainer} /> */}
