@@ -28,6 +28,15 @@ export const logout = () => {
 	)
 }
 
+export const fetchProducts = () => {
+	return (
+		$.ajax({
+			url: '/api/products',
+			method: 'GET' 
+		})
+	)
+}
+
 export const fetchUsers = () => {
 	return ( 
 		$.ajax({
@@ -37,14 +46,12 @@ export const fetchUsers = () => {
 	)
 }
 
-export const fetchProducts = () => {
+export const createProduct = product => {
 	return (
 		$.ajax({
 		url: '/api/products',
 		method: 'POST',
-		data: formData,
-		contentType: false,
-		processData: false
+		data: { product } 
 		})
 	)
 }

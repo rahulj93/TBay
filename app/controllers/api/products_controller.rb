@@ -14,7 +14,12 @@ class Api::ProductsController < ApplicationController
   end 
 
   def show
-    @product = Product.find(params[:id])
+		@product = Product.find(params[:id])
+		if @product 
+			render 'api/products/show'
+		else
+			render json: @product.errors.full_messages, status: 422
+		end 
   end
 
 	private 

@@ -17,17 +17,23 @@ class Greeting extends React.Component {
 
   constructor(props) {
     super(props); 
-    this.state = this.props.currentUser; 
+    this.state = {
+      user: this.props.currentUser, 
+      products: this.props.products}; 
     // this.state = {
     //   listings = [] 
     // }
   }
 
   componentDidMount() {
-    localStorage.setItem('greeting', JSON.stringify(this.state)); 
+    // localStorage.setItem('greeting', JSON.stringify(this.state)); 
+    this.props.fetchProducts; 
+    // this.props.fetchUsers(); 
   }
   
   render () {
+
+    // const products = this.state.products.map
 
     // const listings = [1,2,3,4].map(count => {
     //   <ProductBox
@@ -39,6 +45,17 @@ class Greeting extends React.Component {
 
     return (
       <div className="homePage">
+        {console.log(this.props.products)}; 
+        {this.props.products.map((product)=>{
+          return (
+            <li key={product.id}>
+              Title: {product.title} 
+              Description: {product.description} 
+              Price: {product.price}
+            </li>
+          )
+        })}  
+
         {/* {console.log(this.props.currentUser)}  */}
         <NavBar
           currentUser={this.props.currentUser} 

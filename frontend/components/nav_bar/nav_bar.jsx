@@ -18,7 +18,7 @@ export const NavBar = ({currentUser, logout}) => {
       or
       <Link to='/register' > Register</Link >
       <Link to='/signin' > | Daily Deals | </Link>
-      <Link to='/signin' > Help & Contact | </Link>
+      <Link to='/help' > Help & Contact | </Link>
     </header>  
   ); 
 
@@ -48,7 +48,7 @@ export const NavBar = ({currentUser, logout}) => {
         {display}
       </span>
       <span className='rightlinks'>
-        <Link to='/signin' > Sell | </Link>
+        <Link to='/sell' > Sell | </Link>
         <Link to='/signin' > My Tbay</Link>
             &nbsp;
             &nbsp;
