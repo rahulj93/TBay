@@ -22,7 +22,7 @@ export const receiveCurrentProduct = currentProduct => ({
 	currentProduct  
 }); 
 
-export const receiveAllProducts = () => ({
+export const receiveAllProducts = products => ({
 	type: RECEIVE_ALL_PRODUCTS,
 	products 
 })
@@ -46,7 +46,7 @@ export const createProduct = product => dispatch => (
 
 export const fetchProducts = () => dispatch => (
 	APIUtil.fetchProducts()
-	.then(()=>dispatch(receiveAllProducts(products)))
+	.then(products=>dispatch(receiveAllProducts(products)))
 )
 // export const login = user => dispatch => (
 // 	APIUtil.login(user)

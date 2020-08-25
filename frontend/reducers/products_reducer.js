@@ -11,11 +11,11 @@ const productsReducer = (state = {}, action) => {
       // return action.currentProduct; 
       // return newState.new = action.product.data
     case RECEIVE_ALL_PRODUCTS:
-      action.products.data.forEach(product => {
+      /* action.products.data.forEach(product => {
         newState.all[product._id] = product
       })
-      return newState.all
-      // return action.products 
+      return newState.all */
+       return action.products 
     default:
       return state;
   }
