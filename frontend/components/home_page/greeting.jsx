@@ -46,7 +46,7 @@ class Greeting extends React.Component {
 
     return (
       <div className="homePage">
-        {/* {console.log(Object.keys(this.props.products))};  */}
+        {console.log(Object.keys(this.props.products))}; 
         {console.log(this.props.products)}; 
         {/* {console.log(Object.values(Object.values(this.props.products)))};  */}
         
@@ -99,16 +99,18 @@ class Greeting extends React.Component {
 
         <div className="mainContent"> 
 
+        {/* {console.log(this.props.products.last)} */}
+
           {/* {listings} */}
 
-          {[1,2,3,4].forEach(count => {
+          {/* {[1,2,3,4].forEach(count => {
             // console.log(`count: ${count}`);
               // <li>{`${count}`}</li>
               return <ProductBox />
-          })}
+          })} */}
 
-          <div className="rowbox">
-            row 1 
+          {/* <div className="rowbox"> */}
+            {/* row 1 
             description: <br />
             price: <br />
             <button>Add to Cart</button> <br/>
@@ -119,16 +121,16 @@ class Greeting extends React.Component {
             </Link>
             <ol>
               <li>{Math.random()*99}</li>
-            </ol>            
+            </ol>             */}
             {/* <div className = 'toplinks'> 
               <span class="glyphicon">whoaaaa</span>
             </div> */}            
-          </div>
+          {/* </div> */}
 
           {this.props.products.map((product) => {
             // alert(`Product #${product.id}: ${product}`);
             // console.log(product[product.id]);
-            // console.log(product.id);
+            console.log(product.id);
             // console.log(product);
             return (
               <ProductBox

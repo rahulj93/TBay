@@ -57,6 +57,31 @@ class SellingForm extends React.Component {
         <br/>
 
         <form onSubmit={this.handleSubmit}>
+          {/* Choose a category:  */}
+          {/* <label for="cars">Choose a car:</label>
+          <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select> */}
+          <label>Choose a category:
+          <select 
+          // name="cars" id="cars"
+          >
+            <option>Choose a category</option>
+            <option value="motors">Motors</option>
+            <option value="fashion">Fashion</option>
+            <option value="electronics">Electronics</option>
+            <option value="art">Collectibles & Art</option>
+            <option value="home_garden">Home & Garden</option>
+            <option value="sporting">Sporting Goods</option>
+            <option value="toys">Toys</option>
+            <option value="other">Other</option>
+          </select>
+          </label>
+          <br/> 
+          <br/> 
 
           Title: 
           {/* <label>Title: </label>  */}
@@ -82,6 +107,10 @@ class SellingForm extends React.Component {
             onChange={this.update('price')}
           placeholder="Enter the price of your product here"></input>
           <br/>
+          Upload an Image: 
+          <input
+            type="file"
+            placeholder="Upload an image"></input>
           <button>List it!</button>
           </form>
         <br/>

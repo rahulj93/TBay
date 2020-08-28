@@ -30,9 +30,28 @@ class ProductBox extends React.Component {
   render () {
     let { product } = this.props
     let prod = Object.values(product)[0]; 
+
+    // let picURL = Object.values(product)[1];  
     return (
+      // <Link to='/show'>
+
       <div className="rowbox">
-        <h3>{prod.title}</h3>
+        {/* <img src={product.picture_url} />  */}
+        <div className="productDetails">
+          <Link to='/show'><h4>{prod.title}</h4></Link>
+          description: {prod.description} <br />
+          price: ${prod.price}
+        </div>
+        <div className="productPhoto">
+          <img
+            // className="productPhoto"
+            src={product.picture_url} /> 
+            <br/> 
+            <br/> 
+          <button>Add to Cart</button>
+        </div>
+
+        {/* <img src="https://i.ebayimg.com/thumbs/images/g/6xYAAOSwanVfK9wq/s-l225.webp"/> */}
         {/* {console.log(this.props)} */}
 
         {/* {console.log('Product:', Object.values(this.props.product))} */}
@@ -45,12 +64,13 @@ class ProductBox extends React.Component {
         {/* {this.details(product)} */}
         {/* row 1: box 1 */}
         {/* <br /> */}
-        description: {prod.description}
-        <br />
-        price: {prod.price}
-        <br />
-        <button>Add to Cart</button>
+
+        {/* pictureURL: {product.picture_url} */}
+
+        {/* <img src={prod.picture_url}/> */}
+        {/* <img src={picUrl}/> */}
       </div>
+      // </Link>
     )
   }
 }
