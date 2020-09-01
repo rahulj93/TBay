@@ -75,3 +75,48 @@
   margin-top: 160px;
   width: 65%; 
 }
+
+
+.productListingForm { 
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  background-color: wheat;
+  /* padding-top: 5vw;  */
+  padding: 5vw; 
+  margin-top: 5vw; 
+  margin-left: 25vh;
+  margin-right: 25vh;
+}
+
+.productListingForm > button {
+  width: 33%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  /* background-color: #3665f3; */
+  /* border-color: #3665f3; */
+  /* color: #fff; */
+  margin-top: 20px;
+  /* margin-left: 33vh; */
+  align-self: center;
+}
+
+.productListingForm > input {
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 40px;
+  /* width: 33%;  */
+  /* padding: 50px; */
+}
+.productListingForm > select {
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 40px;
+  /* width: 33%;  */
+  /* padding: 50px; */
+}
+.productListingForm > label {
+  /* width: 33%;  */
+  margin: 20px;
+}
