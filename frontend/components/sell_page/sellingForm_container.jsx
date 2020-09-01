@@ -16,6 +16,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
   processForm: product => dispatch(createProduct(product))
+  // processForm: formData => dispatch(createProduct(formData))
 })
 
 

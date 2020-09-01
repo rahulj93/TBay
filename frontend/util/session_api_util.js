@@ -46,12 +46,26 @@ export const fetchUsers = () => {
 	)
 }
 
-export const createProduct = product => {
+// export const createProduct = product => {
+// 	return (
+// 		$.ajax({
+// 		url: '/api/products',
+// 		method: 'POST',
+// 		data: { product }, 
+// 		// contentType: false, 
+// 		// processData: false
+// 		})
+// 	)
+// }
+export const createProduct = formData => {
+	// debugger; 
 	return (
 		$.ajax({
 		url: '/api/products',
 		method: 'POST',
-		data: { product } 
+		data:  formData ,
+		contentType: false, 
+		processData: false
 		})
 	)
 }

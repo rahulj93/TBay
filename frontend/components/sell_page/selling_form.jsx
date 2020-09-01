@@ -10,9 +10,11 @@ class SellingForm extends React.Component {
       title: '',
       description: '',
       price: '',
-      seller_id: this.props.currentUserId 
+      seller_id: this.props.currentUserId,
+      photoFile: null  
     }
     this.handleSubmit = this.handleSubmit.bind(this); 
+    this.handleFile = this.handleFile.bind(this); 
   }
 
   componentDidMount() {
@@ -30,17 +32,50 @@ class SellingForm extends React.Component {
     }); 
   }
 
+  handleFile(e) {
+    this.setState({ photoFile: e.currentTarget.files[0] })
+  }
+
   handleSubmit(e) {
     e.preventDefault(); 
     const {history} = this.props; 
-    // const product = Object.assign({}, this.state); 
+    const product = Object.assign({}, this.state); 
     // console.log(product); 
-    this.props.processForm(this.state)
+    let formData = new FormData();
+    // console.log(formData);
+    formData.append('product[title]', this.state.title);
+    // // console.log(formData);
+    formData.append('product[description]', this.state.description);
+    // // console.log(formData);
+    formData.append('product[price]', this.state.price);
+    formData.append('product[seller_id]', this.state.seller_id);
+    // // console.log(formData);
+    // // if (this.state.photoFile) {
+      formData.append('product[photo]', this.state.photoFile);
+      // debugger; 
+    // // }
+    // // $.ajax({
+    // //   url: '/api/products',
+    // //   method: 'POST',
+    // //   data: formData,
+    // //   contentType: false,
+    // //   processData: false
+    // // });
+
+    // this.props.processForm(formData)
+
+    // const formData = new FormData(); 
+    // formData.append('product[title', this.state.title);
+    // formData.append('product[photo]', this.state.photoFile); 
+    // this.props.processForm(product)
+    // this.props.processForm(this.state)
+    this.props.processForm(formData)
     .then(()=> {
       console.log(`${this.state.title} has been entered into the database.`); 
-      history.push('/accountDashboard'); 
+      // history.push('/accountDashboard'); 
       history.push('/'); 
     });
+
   }
 
   render () {
@@ -53,11 +88,14 @@ class SellingForm extends React.Component {
           />  */}
 
         <h1>Create a new listing </h1>
-        {/* <input placeholder="Sell something here!"></input> */}
         <br/>
 
-        <form onSubmit={this.handleSubmit}>
-          {/* Choose a category:  */}
+        <form 
+        className="productListingForm"
+        onSubmit={this.handleSubmit}>
+          
+            Category:
+          {/* {/* <div>  */}
           {/* <label for="cars">Choose a car:</label>
           <select name="cars" id="cars">
             <option value="volvo">Volvo</option>
@@ -65,10 +103,9 @@ class SellingForm extends React.Component {
             <option value="mercedes">Mercedes</option>
             <option value="audi">Audi</option>
           </select> */}
-          <label>Choose a category:
-          <select 
-          // name="cars" id="cars"
-          >
+          {/* <label>Choose a category: */}
+          <select>
+            {/* <option> --- </option> */}
             <option>Choose a category</option>
             <option value="motors">Motors</option>
             <option value="fashion">Fashion</option>
@@ -79,39 +116,61 @@ class SellingForm extends React.Component {
             <option value="toys">Toys</option>
             <option value="other">Other</option>
           </select>
-          </label>
+          {/* </label> */}
+          {/* </div> */}
           <br/> 
           <br/> 
 
+          {/* <div> */}
           Title: 
-          {/* <label>Title: </label>  */}
+          {/* <label for="title">Title:  */}
           <input 
+          name="title" id="title"
           type="text"
           value={this.state.title}
           onChange={this.update('title')}
           placeholder="Enter the title of your product here"/> 
+          {/* </label>  */}
+          {/* </div> */}
+
           <br/>
-          Description: 
-          {/* <label>Description: </label>  */}
+          {/* <div> */}
+            Description: 
+          {/* <label>Description:  */}
           <input 
             type="text"
             value={this.state.description}
             onChange={this.update('description')}
           placeholder="Enter a brief description of your product here"></input>
+          {/* </label> */}
+          {/* </div> */}
+
           <br/>
-          Price: 
-          {/* <label>Price: </label>  */}
-          <input 
+            {/* <div> */}
+          Price: $
+          {/* <label>$ */}
+            <input 
             type="text"
             value={this.state.price}
             onChange={this.update('price')}
-          placeholder="Enter the price of your product here"></input>
+            placeholder="Enter the price of your product here"></input>
+          {/* </label>  */}
+          {/* </div> */}
           <br/>
+          <br/>
+          <div>
           Upload an Image: 
           <input
             type="file"
+            // value={}
+            onChange={this.handleFile}
             placeholder="Upload an image"></input>
-          <button>List it!</button>
+          </div>
+
+          <br/> 
+          <br/> 
+          <button
+          className="listItButton">List it!</button>
           </form>
         <br/>
         Image URL: <input placeholder="Enter the image url here"></input> <button>Submit</button>

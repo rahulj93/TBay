@@ -46,8 +46,8 @@ class Greeting extends React.Component {
 
     return (
       <div className="homePage">
-        {console.log(Object.keys(this.props.products))}; 
-        {console.log(this.props.products)}; 
+        {/* {console.log(Object.keys(this.props.products))};  */}
+        {/* {console.log(this.props.products)};  */}
         {/* {console.log(Object.values(Object.values(this.props.products)))};  */}
         
 
@@ -60,16 +60,18 @@ class Greeting extends React.Component {
         <div className="topnav">
           {/* <img src={ require("assets/images/logo.jpg") } />  */}
           {/* <img src={ logo } />  */}
-          <span className="logo"> 
-            <img width="250" height="100" alt="tBay Logo" src={window.logoPNGURL3} />            
-          </span>
+          {/* <span className="logo">  */}
+            <img className="logo"
+            // width="250" height="100" 
+            alt="tBay Logo" src={window.logoPNGURL3} />            
+          {/* </span> */}
           {/* <br/> */}
           {/* &nbsp; */}
           <div className='searchbar'>
             {/* <input type="dropdown" placeholder="Shop by Category"/> */}
             <div className="dropdown"> 
               <select className="dropdown-categories"> 
-                <option value="" disabled selected>Shop by Category: </option>
+                <option value="" disabled selected>Shop by category: </option>
                 <option value=""> electronics </option>
                 <option> appliances </option>
               </select> 
@@ -148,7 +150,7 @@ class Greeting extends React.Component {
           })}  
         </div>
 
-        <div className='homeFooter'> hello </div>
+        <footer className='homeFooter'> hello </footer>
 
 
       </div>

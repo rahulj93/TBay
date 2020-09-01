@@ -39,7 +39,7 @@ class ProductBox extends React.Component {
         {/* <img src={product.picture_url} />  */}
         <div className="productDetails">
           <Link to='/show'><h4>{prod.title}</h4></Link>
-          description: {prod.description} <br />
+          {/* description: {prod.description} <br /> */}
           price: ${prod.price}
         </div>
         <div className="productPhoto">

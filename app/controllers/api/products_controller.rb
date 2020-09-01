@@ -1,5 +1,6 @@
 class Api::ProductsController < ApplicationController 
 	def create 
+		# debugger 
 		@product = Product.new(product_params)
 		if @product.save
 			render 'api/products/show'
