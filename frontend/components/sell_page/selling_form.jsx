@@ -64,9 +64,7 @@ class SellingForm extends React.Component {
 
     // this.props.processForm(formData)
 
-    // const formData = new FormData(); 
-    // formData.append('product[title', this.state.title);
-    // formData.append('product[photo]', this.state.photoFile); 
+    // const formData = new FormData();  
     // this.props.processForm(product)
     // this.props.processForm(this.state)
     this.props.processForm(formData)

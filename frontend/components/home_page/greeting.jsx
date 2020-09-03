@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 import {NavBar, MiddleBar} from '../nav_bar/nav_bar';
 // import {MiddleBar} from '../nav_bar/nav_bar';
 
-import {Carousel} from '../carousel/carousel'; 
+// import {Carousel} from '../carousel/carousel'; 
+import Carousel from '../carousel/carousel'; 
 
 import ProductBox from '../product_listing_form/productBox';
 // import { ProductBox } from '../product_listing_form/productBox';
