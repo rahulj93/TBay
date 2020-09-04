@@ -38,15 +38,20 @@ class Slide extends React.Component {
   render() {
     return (
       <section>
-        {console.log(this.state.carousel)}
+        {/* {console.log(this.state.carousel)} */}
         {
           this.state.carousel.map((s,index) =>
-          <div className={
+          <div id={s.cssID} className={
             index===this.props.activeIndex ? 'active' : 'inactive'}
-            key={index}>
+            key={index}
+            // style={
+            //   {backgroundImage= `url(require{s.image})`}
+            // }
+            >
               <h1>{s.title}</h1>
               {/* {console.log(s.title)} */}
               <p>{s.description}</p>
+              {/* <img className="carouselImage" src={s.image}/> */}
           
   
           </div>
@@ -64,6 +69,20 @@ class Carousel extends React.Component {
       activeIndex: 0,
       length: carouselData.length 
     }
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(() => this.goToNextSlide(), 2400); 
+    // for (let i=1; i<10; i++) {
+      // setTimeout(()=>(this.goToNextSlide(), 300)); 
+    // }
+  }
+
+  pause() {
+    return e => clearInterval(this.timerID);
+  }
+  play() {
+    return e => this.timerID = setInterval(() => this.goToNextSlide(), 2400); 
   }
 
   goToPrevSlide() {
@@ -98,15 +117,22 @@ class Carousel extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="carousel">
+      <div className="mainCarousel">
+        {/* <div className="carousel"> */}
           <LeftArrow goToPrevSlide={() => this.goToPrevSlide()}/> 
-          <div>
+          {/* <div className="myCarousel"> */}
             <Slide
               activeIndex={this.state.activeIndex}
               goToNextSlide={() => this.goToNextSlide()}
-            />
-          </div>
+            > 
+          {/* <LeftArrow goToPrevSlide={() => this.goToPrevSlide()}/>  */}
+            </Slide>
+            {/* <button onClick={this.pause()}>Pause</button> */}
+            {/* <button onClick={this.play()}>Play</button> */}
+          {/* </div> */}
+          <button onClick={this.pause()}>Pause</button>
+          <button onClick={this.play()}>Play</button>
+
           {/* <div
             className="myCarousel"
           >
@@ -114,7 +140,7 @@ class Carousel extends React.Component {
             <img src="https://www.monsterinsights.com/wp-content/uploads/2019/11/breathtaking-online-shopping-statistics-you-never-knew-625x300.png" alt="Shopping" ></img>
           </div> */}
           <RightArrow goToNextSlide={()=>this.goToNextSlide()}/>
-        </div>
+        {/* </div> */}
       </div>
     )
   }

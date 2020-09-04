@@ -146,24 +146,99 @@
   flex-direction: row;
   align-items: center;
   height: 400px;
+  /* height: 200px; */
   background-color: yellowgreen;
   /* font-size: x-large; */
   margin-top: 5px;
 }
 .myCarousel {
   /* background-color: lightgray; */
-  background-color: transparent;
+  /* background-color: transparent; */
+  /* max-height: 100%; */
   width: 100%;
   display: flex;
-  justify-content: stretch;
+  /* flex-direction: row; */
+  /* justify-content: stretch; */
   /* justify-content: center;  */
   margin-left: 10px;
   margin-right: 10px;
   color: black;
-  height: 400px;
+  /* height: 400px; */
   align-items: center;
 }
+.carousel > .myCarousel {
+  display: flex;
+  flex-direction: column;
+  /* object-fit: cover; */
+  max-height: 100%;
+  max-width: 100%;
+  /* height: 75%; */
+  /* width: 75%;   */
+}
+.myCarousel > img {
+  object-fit: contain;
+  max-height: 100%;
+}
+#savings {
+  /* position: relative; */
+  height: 200px;
+  background-position: center;
+  /* height: 100%; */
+  /* width: 75vw; */
+  /* background-size: contain; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqQTo7tbLTmbzdlrih0G2P2XozDtsP6uxfslJim0LLN4OV7a9q&usqp=CAU"); */
+  background-image: url("https://i.ebayimg.com/images/g/lhYAAOSwU~9fTrAQ/s-l1600.webp");
+}
 
+/* <div data-size="1600" class="hl-image hl-image-js js-only hl-full-bleed-banner__image hl-image__fill" style="background-image: url(&quot;https://i.ebayimg.com/images/g/lhYAAOSwU~9fTrAQ/s-l1600.webp&quot;);"><div class="hl-image__background" style="background-color: rgb(251, 205, 37); opacity: 0;"></div><img onerror="typeof lazyLoad !== 'undefined' &amp;&amp; lazyLoad.addToQueue(this, true)" src="https://i.ebayimg.com/images/g/lhYAAOSwU~9fTrAQ/s-l1600.webp" role="presentation" alt="" data-load-time="1599171304598"></div> */
+
+#work {
+  height: 200px;
+  /* max-width: 1480px; */
+  /* position: relative; */
+  /* height: 100%; */
+  /* background-size: contain; */
+  background-position: center;
+  background-size: cover;
+  /* box-sizing: border-box; */
+  /* overflow: hidden; */
+  /* height: 300px; */
+  /* width: 75vw; */
+  background-repeat: no-repeat;
+  /* background-image: url("https://www.monsterinsights.com/wp-content/uploads/2019/11/breathtaking-online-shopping-statistics-you-never-knew-625x300.png"); */
+  background-image: url("https://i.ebayimg.com/images/g/5mwAAOSwoMhfRCtE/s-l960.webp");
+}
+/* <div data-size="920" class="hl-image hl-image-js js-only hl-color-block-banner__image hl-image__fill" style="background-image: url(&quot;https://i.ebayimg.com/images/g/5mwAAOSwoMhfRCtE/s-l960.webp&quot;);"><div class="hl-image__background" style="background-color: rgb(166, 13, 138); opacity: 0;"></div><img onerror="typeof lazyLoad !== 'undefined' &amp;&amp; lazyLoad.addToQueue(this, true)" src="https://i.ebayimg.com/images/g/5mwAAOSwoMhfRCtE/s-l960.webp" alt="Extra 25% off 25 top brands" data-load-time="1599171304547"></div> */
+
+#local {
+  /* left: 20px; */
+  height: 200px;
+  max-width: 1480px;
+  position: relative;
+  /* display: flex; */
+  /* -webkit-box-orient: vertical; */
+  /* -webkit-box-direction: reverse; */
+  /* flex-direction: column-reverse; */
+  /* width: 75vw; */
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  background-image: url("https://i.ebayimg.com/images/g/HGkAAOSwqJJfRVv9/s-l1600.webp"); 
+  /* url("https://i.ebayimg.com/images/g/L20AA"); */
+}
+/* .mainCarousel {
+  display:flex; 
+  flex-direction: row;
+} */
+/* <div data-size="1600" class="hl-image hl-image-js js-only hl-full-bleed-banner__image hl-image__fill" style="background-image: url(&quot;https://i.ebayimg.com/images/g/HGkAAOSwqJJfRVv9/s-l1600.webp&quot;);"><div class="hl-image__background" style="background-color: rgb(196, 0, 58); opacity: 0;"></div><img onerror="typeof lazyLoad !== 'undefined' &amp;&amp; lazyLoad.addToQueue(this, true)" src="https://i.ebayimg.com/images/g/HGkAAOSwqJJfRVv9/s-l1600.webp" role="presentation" alt="" data-load-time="1599171305028"></div> */
+
+#savings > img {
+  height: 100%; 
+  /* background-color: wheat; */}
+#work > img {
+  max-height: 100%;
+}
 /* .sideNav {
   width: 75%;
   position: absolute;

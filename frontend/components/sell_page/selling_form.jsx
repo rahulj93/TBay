@@ -171,7 +171,7 @@ class SellingForm extends React.Component {
           className="listItButton">List it!</button>
           </form>
         <br/>
-        Image URL: <input placeholder="Enter the image url here"></input> <button>Submit</button>
+        {/* Image URL: <input placeholder="Enter the image url here"></input> <button>Submit</button> */}
         <br/>
 
         <Link to='/'> <button>Return home</button> </Link>
