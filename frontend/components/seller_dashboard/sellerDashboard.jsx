@@ -32,6 +32,7 @@ class SellerDashboard extends React.Component {
     })
     return (
       <div> 
+        
         {/* {console.log(`state and history!: ${this.state} ${this.history}`)} */}
         {/* {console.log('prods', Object.values(Object.values(this.props.products)))}; */}
         {/* {console.log('prods', prods)}; */}
