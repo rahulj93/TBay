@@ -119,7 +119,7 @@ class Carousel extends React.Component {
     return (
       <div className="mainCarousel">
         {/* <div className="carousel"> */}
-          <LeftArrow goToPrevSlide={() => this.goToPrevSlide()}/> 
+          {/* <LeftArrow goToPrevSlide={() => this.goToPrevSlide()}/>  */}
           {/* <div className="myCarousel"> */}
             <Slide
               activeIndex={this.state.activeIndex}
@@ -130,16 +130,20 @@ class Carousel extends React.Component {
             {/* <button onClick={this.pause()}>Pause</button> */}
             {/* <button onClick={this.play()}>Play</button> */}
           {/* </div> */}
-          <button onClick={this.pause()}>Pause</button>
-          <button onClick={this.play()}>Play</button>
+          <div className="carouselControlButtons">
+            <LeftArrow goToPrevSlide={() => this.goToPrevSlide()} /> 
 
-          {/* <div
-            className="myCarousel"
-          >
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqQTo7tbLTmbzdlrih0G2P2XozDtsP6uxfslJim0LLN4OV7a9q&usqp=CAU" alt="minions" ></img>
-            <img src="https://www.monsterinsights.com/wp-content/uploads/2019/11/breathtaking-online-shopping-statistics-you-never-knew-625x300.png" alt="Shopping" ></img>
-          </div> */}
-          <RightArrow goToNextSlide={()=>this.goToNextSlide()}/>
+              <button onClick={this.pause()}>Pause</button>
+              <button onClick={this.play()}>Play</button>
+
+              {/* <div
+                className="myCarousel"
+              >
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqQTo7tbLTmbzdlrih0G2P2XozDtsP6uxfslJim0LLN4OV7a9q&usqp=CAU" alt="minions" ></img>
+                <img src="https://www.monsterinsights.com/wp-content/uploads/2019/11/breathtaking-online-shopping-statistics-you-never-knew-625x300.png" alt="Shopping" ></img>
+              </div> */}
+              <RightArrow goToNextSlide={()=>this.goToNextSlide()}/>
+          </div>
         {/* </div> */}
       </div>
     )

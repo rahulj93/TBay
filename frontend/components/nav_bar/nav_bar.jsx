@@ -49,7 +49,7 @@ export const NavBar = ({currentUser, logout}) => {
       </span>
       <span className='rightlinks'>
         <Link to='/sell' > Sell | </Link>
-        <Link to='/signin' > My Tbay</Link>
+        <Link to='/accountDashboard' > My Tbay</Link>
             &nbsp;
             &nbsp;
             &nbsp;

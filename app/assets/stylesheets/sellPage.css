@@ -86,8 +86,9 @@
   /* padding-top: 5vw;  */
   padding: 5vw; 
   margin-top: 5vw; 
-  margin-left: 25vh;
-  margin-right: 25vh;
+  /* margin-left: 25vh; */
+  /* margin-right: 25vh; */
+  /* width: 40vw;  */
 }
 
 .productListingForm > button {
@@ -119,4 +120,26 @@
 .productListingForm > label {
   /* width: 33%;  */
   margin: 20px;
+}
+
+
+.listPAGE {
+  display: flex; 
+  flex-direction: row;
+}
+
+.listingImagePreview {
+  width: 50vw; 
+  background-color: wheat;
+  /* position: absolute; */
+}
+
+.previewIMG {
+  /* height: 40vh;  */
+  margin-top: 5vw; 
+  margin-left: 5vw;
+  width: 40vw; 
+  max-width: 50vw;
+  /* position: relative; */
+  object-fit: contain;
 }

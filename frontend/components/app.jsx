@@ -19,6 +19,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ProductBox from "./product_listing_form/productBox";
 import sellingForm_container from "./sell_page/sellingForm_container";
+import DashboardContainer from './seller_dashboard/dashboard_container';
 
 import ShowPage from './show_page/show_page'; 
 import SellerDashboard from './seller_dashboard/sellerDashboard'; 
@@ -36,7 +37,8 @@ const App = () => (
       <Route exact path='/sell' component={SellPage} /> 
       <ProtectedRoute exact path='/list' component={sellingForm_container} /> 
       <Route exact path='/show' component={ShowPage} /> 
-      <Route exact path='/accountDashboard' component={SellerDashboard} /> 
+      {/* <Route exact path='/accountDashboard' component={SellerDashboard} />  */}
+      <ProtectedRoute exact path='/accountDashboard' component={DashboardContainer} /> 
       {/* <ProtectedRoute exact path="/" component= {GreetingContainer} />  */}
       {/* <ProtectedRoute */}
       {/* <ProtectedRoute exact path="/demoUser" component={DemoUserContainer} /> */}

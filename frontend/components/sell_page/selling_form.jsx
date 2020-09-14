@@ -11,7 +11,8 @@ class SellingForm extends React.Component {
       description: '',
       price: '',
       seller_id: this.props.currentUserId,
-      photoFile: null  
+      photoFile: null,
+      photoUrl: null   
     }
     this.handleSubmit = this.handleSubmit.bind(this); 
     this.handleFile = this.handleFile.bind(this); 
@@ -33,7 +34,15 @@ class SellingForm extends React.Component {
   }
 
   handleFile(e) {
-    this.setState({ photoFile: e.currentTarget.files[0] })
+    const file = e.currentTarget.files[0]; 
+    const fileReader = new FileReader(); 
+    fileReader.onloadend = () => {
+      this.setState({ photoFile: file, photoUrl: fileReader.result })
+    }
+    if (file) {
+      fileReader.readAsDataURL(file); 
+    }
+    // this.setState({ photoFile: e.currentTarget.files[0] })
   }
 
   handleSubmit(e) {
@@ -70,28 +79,29 @@ class SellingForm extends React.Component {
     this.props.processForm(formData)
     .then(()=> {
       console.log(`${this.state.title} has been entered into the database.`); 
-      // history.push('/accountDashboard'); 
-      history.push('/'); 
+      history.push('/accountDashboard'); 
+      // history.push('/'); 
     });
 
   }
 
   render () {
+    const preview = this.state.photoUrl ? <img className="previewIMG" src={this.state.photoUrl} /> : null; 
     return (
-      <div>
+      <div className="listPAGE">
 
         {/* <NavBar
           currentUser={this.props.currentUser}
           logout={this.props.logout}
           />  */}
 
-        <h1>Create a new listing </h1>
         <br/>
 
         <form 
         className="productListingForm"
         onSubmit={this.handleSubmit}>
-          
+          <h1>Create a new listing </h1>
+
             Category:
           {/* {/* <div>  */}
           {/* <label for="cars">Choose a car:</label>
@@ -173,6 +183,9 @@ class SellingForm extends React.Component {
         <br/>
         {/* Image URL: <input placeholder="Enter the image url here"></input> <button>Submit</button> */}
         <br/>
+        {/* <div className="listingImagePreview"> */}
+          {preview}
+        {/* </div> */}
 
         <Link to='/'> <button>Return home</button> </Link>
       </div>
