@@ -101,7 +101,7 @@ class SellPage extends React.Component {
           <div>
             <h2>Ready to sell?</h2>
             List your item for free, and earn 90% when it sells. 
-            {/* <Link to='/list'> <button>Start Selling</button> </Link> */}
+            <Link to='/list'> <button>Start Selling</button> </Link>
           </div> 
 
           <section className="largerAdBox">
