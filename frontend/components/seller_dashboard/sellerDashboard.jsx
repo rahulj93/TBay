@@ -40,14 +40,15 @@ class SellerDashboard extends React.Component {
         {/* {console.log("THIS ONE!!", prods[1])} */}
         {console.log("THIS GUY!", this.props.currentUser.id)}
 
-        Welcome to your account dashboard. Manage your items.  
+        Welcome to your account dashboard, {this.props.currentUser.username}. Manage your items.  
 
         {filtered.map((prod) => {
           if (prod) {
             return (
               <li key={prod.id}>
                 title: {prod.title} <br/>
-                seller_id: {prod.seller_id}
+                {/* seller_id: {prod.seller_id} */}
+                Seller: {this.props.currentUser.username}
                 </li>
             )
           }
